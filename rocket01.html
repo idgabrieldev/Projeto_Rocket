@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!--define documento html5-->
+<html lang="pt-br" class="light">
+    <head>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,
+        opsz,wght@0,14..32,500;1,14..32,500&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevLink</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body><!--corpo-->
+        <div id="container"><!--principal caixa-->
+            <div id="profile">
+                <img 
+                    src="./assets/avatar.png" 
+                    alt="imagem de perfil
+                     de Gabriel usando terno azul."
+                /> <!--tag img será trocada-->
+                <p>@Idgabriel.dev</p>
+            </div><!--perfilfoto-->
+
+            <div id="switch" onclick="toggleMode()">
+                <button></button>
+                <span></span>
+
+            </div>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">Landing Page</a><!-- abre uma nova guia e não sai desta(blank)-->
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">Git Hub</a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">Vercel</a>
+                    </li>
+                </ul>
+
+                <div id="social-links"> <!--outra caixa identicada pelo id (div é a caixa padrao)-->
+
+                    <a href="semlink" target="_blank"> 
+                        <ion-icon name="rocket-outline"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabriel-silva-12b100200/" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="https://github.com/idgabrieldev" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="semlink" target="_blank">
+                        <ion-icon name="logo-vercel"></ion-icon>
+                    </a>
+
+                </div>
+                <footer>
+                    Feito com Dedicação e Paixão por Gion ♥
+                </footer>
+        </div>   
+
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+         ></script>
+         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+         ></script> 
+
+         <script src="./script.js"></script>
+    </body>       
+</html>

@@ -1,0 +1,183 @@
+* { /*seletor universal - toda a pagina*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root { /*definiu como raiz-abaixo definiu variaveis- este comeca em fundo escuro e letra clara -(light)*/ 
+
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobiledark.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(225, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(225, 255, 255, 0.02);  
+    --switch-bg-url: url(./assets/moonlight.svg);
+
+    
+}   
+
+.light { /* puxou a classe light como inicio - definiu texto em preto - backroung branco - border preta
+    este é o (black) */
+    --text-color: black;
+    --bg-url: url(./assets/lightmodeback.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+
+}
+    
+#container { /*tamanho para a minha foto*/
+    width: 360px;                         
+    margin: 56px auto 0px;      /*posso colocar os 4 lados dentro da tag -  top, right, bottom, left*/
+    padding: 0 24px;
+}
+
+#profile {
+
+    text-align: center;
+    padding: 24px;
+}
+
+
+
+#profile img{
+
+    width: 112px;
+ 
+}
+ 
+#profile p { /* corrigido fonte do paragrafo- profile */
+
+      font-weight: bold;
+      line-height: 24px;
+      margin-top: 8px;
+    
+ }
+
+#switch {
+    width: 64px;
+    position: relative;
+    margin: 4px auto;
+
+}
+
+#switch button {
+
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+
+
+}
+     
+
+ /* LINKS LISTA */
+
+ul {
+
+    list-style: none; /* nenhum*/
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}   
+
+ul li a {
+
+    display: flex; /*block para line e visse versa*/
+    justify-content: center;
+    align-items: center;/*itens alinhados*/
+    padding: 16px 24px;/*conteudo de dentro do texto (seu tamanho de espaço vazio)*/
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);/*padrao red green blue e alpha*/
+    border-radius: 8px; /*arredondamento de bordas*/
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* tem que usar junto para funcionar back em cima e webkit embaixo)*/
+    text-decoration: none;
+    font-weight: 500; /*preferi desta forma*/
+    transition: background 0.2s;
+
+}
+
+ul li a:hover {
+
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);  /*padrao red green blue e alpha*/
+
+}
+
+/*social links*/
+
+#social-links { /* CAIXA*/
+
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;    
+}
+
+#social-links a { /*PARAGRAFO*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}   
+
+#social-links a:hover { /*TRANSITION*/
+
+    background: var(--highlight-color);    
+
+}
+
+footer {
+
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+
+}
+
+
